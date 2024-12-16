@@ -30,21 +30,6 @@ jobs:
           echo "export CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar" >> $GITHUB_ENV
           echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> $GITHUB_ENV
 
-      # - name: Install depot_tools
-      #   run: |
-      #     wget https://storage.googleapis.com/chrome-infra/depot_tools.zip
-      #     unzip -o depot_tools.zip
-      #     echo "export DEPOT_TOOLS=$(pwd)/depot_tools" >> $GITHUB_ENV
-      #     echo "export PATH=\$PATH:\$DEPOT_TOOLS" >> $GITHUB_ENV
-      #     echo "export PATH=\$PATH:\$DEPOT_TOOLS" >> $GITHUB_ENV
-      #     # Verify fetch command
-      #     which fetch
-
-      # - name: Source environment variables
-      #   run: |
-      #     echo "Sourcing environment variables"
-      #     source $GITHUB_ENV
-
       - name: Install Depot Tools
         uses: newkdev/setup-depot-tools@v1.0.1
       - name: Download WebRTC M94 source code
