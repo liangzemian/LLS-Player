@@ -27,11 +27,8 @@ jobs:
       - name: Install depot_tools
         run: |
           wget https://storage.googleapis.com/chrome-infra/depot_tools.zip
-          unzip depot_tools.zip
+          unzip -o depot_tools.zip
           echo "export PATH=\$PATH:$(pwd)/depot_tools" >> $GITHUB_ENV
-          echo "export DEPOT_TOOLS=$(pwd)/depot_tools" >> $GITHUB_ENV
-          echo "export PATH=\$PATH:\$DEPOT_TOOLS" >> $GITHUB_ENV
-          source $GITHUB_ENV
 
       - name: Download WebRTC M94 source code
         run: |
