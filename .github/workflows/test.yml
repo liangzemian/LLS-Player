@@ -45,12 +45,12 @@ jobs:
       #     echo "Sourcing environment variables"
       #     source $GITHUB_ENV
 
-      - uses: depot/setup-action@v1
+      - name: Install Depot Tools
+        uses: newkdev/setup-depot-tools@v1.0.1
       - name: Download WebRTC M94 source code
         run: |
           mkdir webrtc
           cd webrtc
-          # $DEPOT_TOOLS/fetch --nohooks webrtc_android
           fetch --nohooks webrtc_android
           cd src
           git checkout -b m94 branch-heads/4606
