@@ -45,9 +45,9 @@ jobs:
       #     echo "Sourcing environment variables"
       #     source $GITHUB_ENV
 
-      - name: Download WebRTC M94 source code
       - uses: depot/setup-action@v1
-      - run: |
+      - name: Download WebRTC M94 source code
+        run: |
           mkdir webrtc
           cd webrtc
           # $DEPOT_TOOLS/fetch --nohooks webrtc_android
